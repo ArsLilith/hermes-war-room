@@ -55,3 +55,37 @@
     cursor: not-allowed;
   }
 }
+
+/* ===================================================================
+   Custom Dark-Neon War Room skin (added by deployment fork)
+   =================================================================== */
+@layer base {
+  .dark body {
+    background:
+      radial-gradient(1200px 600px at 18% -12%, rgba(0, 220, 130, 0.07), transparent 60%),
+      radial-gradient(1000px 520px at 102% -4%, rgba(0, 220, 130, 0.045), transparent 60%),
+      #05070b;
+  }
+}
+
+/* glow on green accents (status dots, primary text/badges) */
+.dark .text-primary,
+.dark .text-green-400,
+.dark .text-green-500 {
+  text-shadow: 0 0 8px rgba(0, 220, 130, 0.55);
+}
+.dark .bg-primary,
+.dark .bg-green-400,
+.dark .bg-green-500 {
+  box-shadow: 0 0 12px rgba(0, 220, 130, 0.5);
+}
+/* subtle neon edge on bordered cards / ringed panels */
+.dark [class*="ring-"],
+.dark [class*="border-"] {
+  box-shadow: 0 0 0 1px rgba(0, 220, 130, 0.08), 0 0 22px -8px rgba(0, 220, 130, 0.20);
+}
+/* primary buttons: stronger neon */
+.dark button[class*="primary"],
+.dark a[class*="primary"] {
+  box-shadow: 0 0 16px -2px rgba(0, 220, 130, 0.55);
+}
