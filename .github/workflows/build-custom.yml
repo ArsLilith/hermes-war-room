@@ -1,0 +1,28 @@
+name: build-custom
+on:
+  push:
+    branches: [darkneon]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm build
+      - run: tar -czf hermes-war-room.tar.gz .output
+      - name: Publish custom release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete custom --cleanup-tag -y || true
+          gh release create custom hermes-war-room.tar.gz \
+            --title "custom dark-neon" \
+            --notes "Custom dark-neon skin (forced dark, neon glow, Operations Hall / Recruit labels)" \
+            --target darkneon
