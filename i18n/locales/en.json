@@ -4,7 +4,7 @@
     "description": "Visual orchestration layer for the Hermes multi-agent delegation system."
   },
   "nav": {
-    "warRoom": "Operations Room",
+    "warRoom": "Operations Hall",
     "team": "The Team",
     "missions": "Missions"
   },
@@ -25,7 +25,7 @@
     "dismiss": "Dismiss this notice"
   },
   "warRoom": {
-    "title": "Operations Room",
+    "title": "Operations Hall",
     "errorTitle": "Failed to load profiles",
     "empty": "No Hermes profiles found under {dir}.",
     "operativesCount": "no operatives | 1 operative | {count} operatives",
@@ -215,7 +215,7 @@
     "title": "The Team",
     "errorTitle": "Failed to load profiles",
     "empty": "No Hermes profiles found under {dir}.",
-    "hire": "Hire"
+    "hire": "Recruit"
   },
   "hire": {
     "title": "Operative intake",
@@ -231,10 +231,10 @@
     "clonePlaceholder": "Start fresh",
     "cloneHint": "Optionally seed config.yaml + .env from an existing profile. Identity below overrides their SOUL.md.",
     "noteAfterCreate": "MCP servers and provider auth can be configured after the profile is created.",
-    "submit": "Hire",
+    "submit": "Recruit",
     "submitting": "Hiring…",
-    "success": "{name} hired.",
-    "failure": "Could not hire profile"
+    "success": "{name} recruited.",
+    "failure": "Could not recruit profile"
   },
   "presets": {
     "orchestrator": {
