@@ -12,6 +12,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // Custom dark-neon skin: force dark mode by default
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark'
+  },
+
   /* No sourcemaps in production: Tailwind v4's Vite plugin doesn't emit
      sourcemaps for its CSS transformations, which floods the build log
      with hundreds of "Sourcemap is likely to be incorrect" warnings.
