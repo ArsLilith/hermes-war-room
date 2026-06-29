@@ -89,3 +89,24 @@
 .dark a[class*="primary"] {
   box-shadow: 0 0 16px -2px rgba(0, 220, 130, 0.55);
 }
+
+/* ===================================================================
+   Best-effort full DARK via global inversion (hardcoded-light app)
+   Inverts the whole UI (cream paper -> dark, ink -> light) coherently,
+   then counter-inverts media/avatars so illustrations stay natural.
+   =================================================================== */
+html.hwr-dark-invert {
+  filter: invert(1) hue-rotate(180deg);
+  background: #0a0e16;
+}
+/* counter-invert anything that should keep its real colours */
+html.hwr-dark-invert img,
+html.hwr-dark-invert picture,
+html.hwr-dark-invert video,
+html.hwr-dark-invert canvas,
+html.hwr-dark-invert svg image,
+html.hwr-dark-invert .disc,
+html.hwr-dark-invert [class*="avatar"],
+html.hwr-dark-invert [class*="portrait"] {
+  filter: invert(1) hue-rotate(180deg);
+}
